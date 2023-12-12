@@ -43,27 +43,21 @@ import os
 import cv2
 from ultralytics import YOLO
 
-# Calea către modelul YOLO
 model_path = "best.pt"
 
-# Încarcă modelul
 model = YOLO(model_path)
 
-# Threshold pentru detecție
 threshold = 0.5
 
-# Deschide camera video
-cap = cv2.VideoCapture(0)  # 0 indică camera principală
+cap = cv2.VideoCapture(0) 
 
 while True:
-    # Captură un cadru de la camera video
     ret, frame = cap.read()
 
     if not ret:
         print("Eroare la capturarea de la camera.")
         break
 
-    # Realizează detecția pe cadru
     results = model(frame)[0]
 
     for result in results.boxes.data.tolist():
@@ -74,10 +68,8 @@ while True:
             cv2.putText(frame, results.names[int(class_id)].upper(), (int(x1), int(y1 - 10)),
                         cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 255, 0), 3, cv2.LINE_AA)
 
-    # Afișează rezultatul în fereastra video
     cv2.imshow('Result', frame)
 
-    # Ieși din buclă când se apasă tasta 'q'
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
