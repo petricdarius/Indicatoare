@@ -1,0 +1,6 @@
+path: C:\Users\badli\OneDrive\Desktop\proiect dari\SemneCirculatie\simple_images
+train: C:\Users\badli\OneDrive\Desktop\proiect dari\SemneCirculatie\simple_images\train
+val:  C:\Users\badli\OneDrive\Desktop\proiect dari\SemneCirculatie\simple_images\val
+
+names:
+  0: indicator_stop

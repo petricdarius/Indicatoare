@@ -1,0 +1,1 @@
+Am creat acest proiect pe baza de yolo, momentan are doar o clasa pentru indicatorul de oprire, urmand ca pana maxim la finalul saptamanii sa adaug si restul claselor.Programul are doua parti:cea de testare:test si cea de antrenare:main.Dupa doua rulari ale antrenamentului, a doua reluand informatii din primul antrenament, programul e capabil sa detecteze corect indicatorul
